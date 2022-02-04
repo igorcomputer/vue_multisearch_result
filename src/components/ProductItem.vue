@@ -8,12 +8,14 @@
       </div>
       <div class="func-btns">
         <a class="favorite-btn" :data-ms-favorite=getProductCode><img src="@/assets/img/heart.svg" alt="icon"></a>
-        <a class="compare-btn" :data-ms-compare=product_data.id><img src="@/assets/img/compare.svg" alt="icon"></a>
+        <a class="comparation-btn" :data-ms-compare=product_data.id><img src="@/assets/img/compare.svg" alt="icon"></a>
       </div>
     </div>
     <div class="prod-item-body">
       <div class="prod-item-img">
-        <img :src="product_data.picture" :alt="product_data.name" @error="setNoImageIcon"/>
+        <a class="a_name" :href="product_data.url">
+          <img :src="product_data.picture" :alt="product_data.name" @error="setNoImageIcon"/>
+        </a>
       </div>
       <div class="prod-item-data">
         <div class="prod-item-sku">Артикул: <span class="prod-item-sku-num">{{product_data.params_data["Артикул"]}}</span></div>

@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     resetFilter(){
-      location.href = "?search="+this.QUERY;
+      location.href = "?q="+this.QUERY;
     }
   }
 }

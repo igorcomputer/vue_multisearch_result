@@ -2,7 +2,7 @@
   <div class="search_form_container">
     <form method="get" action="">
       <div class="form-field form-find">
-        <input class="head-find" v-model="searchText" type="text" name="search" placeholder="Поиск">
+        <input class="head-find" v-model="searchText" type="text" name="q" placeholder="Поиск" autocomplete="off" />
       </div>
     </form>
   </div>
@@ -23,7 +23,7 @@ export default {
   },
   mounted(){
     const urlParams = new URLSearchParams(window.location.search);
-    this.searchText = urlParams.get("search");
+    this.searchText = urlParams.get("q");
     if(this.searchText.trim()){
       this.GET_PRODUCTS_FROM_API({
         query: this.searchText
