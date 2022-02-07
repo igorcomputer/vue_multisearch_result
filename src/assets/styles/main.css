@@ -546,10 +546,18 @@ html .mss_r { scrollbar-color: #888 #f1f1f1; scrollbar-width: thin; }
 }
 
 .mss_r .pagination {
-    margin-top: 40px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    margin: 0 !important;
+}
+
+.mss_r .pagination_desc {
+    text-align: center;
+    font-size: 14px;
+    color: #5a5555;
+    padding: 20px;
+    padding-top: 30px;
 }
 
 .mss_r .pagi-btn {
@@ -763,7 +771,28 @@ html .mss_r { scrollbar-color: #888 #f1f1f1; scrollbar-width: thin; }
     padding-bottom: 80px;
 }
 
+.mss_r .total-mobile {
+    display:none;
+    padding:20px;
+    padding: 15px 24px;
+    font-size: 15px;
+}
+
+.mss_r .total-mobile-caption {
+
+}
+
+.mss_r .total-mobile-count {
+    color: #929292;
+    font-size: 17px;
+}
+
 @media (max-width: 992px) {
+
+    .mss_r .total-mobile {
+        display: block;
+    }
+
     .mss_r body {
         position: relative;
         overflow-x: hidden;

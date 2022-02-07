@@ -1,9 +1,13 @@
 <template>
   <div v-if="TOTAL">
+
+    <div v-if="getPageCount > 1" class="pagination_desc">Страница {{getCurrentPage}} из  {{getPageCount}}</div>
+
     <div v-if="getPageCount > 1" class="pagination">
       <a class="pagi-btn pagi-back" :class="{'inactive':isPageFirst===true}" @click="toPrevPage"></a>
       <a class="pagi-btn pagi-next" :class="{'inactive':isPageLast===true}" @click="toNextPage"></a>
     </div>
+
   </div>
 </template>
 

@@ -5,6 +5,10 @@
       <img src="@/assets/img/close.svg" alt="close icon"></a>
     </div>
 
+    <div class="total-mobile">
+      <span class="total-mobile-caption">Всего найдено: </span><span class="total-mobile-count">{{TOTAL}}</span>
+    </div>
+
     <div>
 
       <SidebarTopLinks/>
